@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card-header>
+    <ion-card-title color="warning">¡The Great Capybara Journey!</ion-card-title>
+  </ion-card-header>
+  <img src="../../../assets/img/capybara.jpg" alt="Imagen del Juego" />
+  <ion-card-content>
+    <ion-label>Si eres un gran seguidor de los Capybaras o si acabas de conocerlos hoy, ¡has llegado al lugar correcto! Descubre una aventura de este talentoso animal. En un juego nuevo estilo retro en 2D.</ion-label>
+  </ion-card-content>
+
+  <ion-card-header>
+    <ion-card-title color="warning">Historia del Juego</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-label>
+      {{ textoCorto }}
+      <span *ngIf="mostrarMas" class="texto-largo">{{ textoLargo }}</span>
+    </ion-label>
+    <ion-label *ngIf="!mostrarMas" (click)="mostrarMasTexto()" expand="block" color="primary">Leer más...</ion-label>
+    <ion-label *ngIf="mostrarMas" (click)="mostrarMenosTexto()" expand="block" color="primary">Leer menos...</ion-label>
+  </ion-card-content>
+
+  <ion-card-header>
+    <ion-card-title  color="warning">Desarrolladores</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img alt="Erick" src="../../../assets/img/miembro1.jpeg" />
+        </ion-thumbnail>
+        <ion-label>Erick Francisco Cruz Robles</ion-label>
+      </ion-item> 
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img alt="Nicolas" src="../../../assets/img/miembro2.jpeg" />
+        </ion-thumbnail>
+        <ion-label>Nicolás Lemus Cisneros</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img alt="Fernando" src="../../../assets/img/miembro3.jpeg" />
+        </ion-thumbnail>
+        <ion-label>Fernando Hernández Cervantes</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col size="6">
+      <ion-card>
+        <img src="../../../assets/img/esrb.png" alt="Clasificación ESRB" />
+        <ion-card-content>Clasificación</ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card>
+        <img src="../../../assets/img/images.jpg" alt="Lanzamiento del Juego" />
+        <ion-card-content>Lanzamiento</ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

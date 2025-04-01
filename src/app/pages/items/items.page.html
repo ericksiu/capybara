@@ -1,0 +1,15 @@
+<app-header titulo="Items"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card class="item-card" *ngFor="let item of itemsRecientes" (click)="verDetalleItem(item)">
+      <ion-img class="item-img" [src]="item.imagen" alt="{{ item.nombre }}"></ion-img>
+      <ion-card-header>
+        <ion-card-title color="success">{{ item.nombre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ item.descripcion }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

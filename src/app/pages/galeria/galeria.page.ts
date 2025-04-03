@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Galeria, RespuestaExtras } from '../../interfaces/interfaces';
+import { GaleriaService } from '../../services/galeria.service';
 
 @Component({
   standalone: false,
@@ -7,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./galeria.page.scss'],
 })
 export class GaleriaPage implements OnInit {
-
-  constructor() { }
+  galeria: Galeria[] = [];
+  constructor(private servicioGaleria: GaleriaService) { }
 
   ngOnInit() {
+    this.servicioGaleria.getDatos1()
+        .subscribe((resp: RespuestaExtras)=>{
+          console.log('Controles', resp)
+            this.galeria=resp.Galeria.results;
+        })
   }
 
 }

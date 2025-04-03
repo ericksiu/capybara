@@ -17,12 +17,16 @@
           <ion-label><strong>Descripción:</strong> {{ personaje.descripcion }}</ion-label>
         </ion-item>
         <ion-item>
+          
+          <img slot="start" class="icono" alt="Salud" src="../../../assets/img/corazon.png"/>
           <ion-label><strong>Salud:</strong> {{ personaje.salud }}</ion-label>
         </ion-item>
         <ion-item>
+          <img slot="start" class="icono" alt="Daño" src="../../../assets/img/espada.png"/>
           <ion-label><strong>Daño:</strong> {{ personaje.dano }}</ion-label>
         </ion-item>
         <ion-item>
+          <img slot="start" class="icono" alt="Armas" src="../../../assets/img/gun.png"/>
           <ion-label><strong>Armas:</strong> {{ personaje.armas.join(', ') }}</ion-label>
         </ion-item>
       </ion-list>

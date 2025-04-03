@@ -16,9 +16,9 @@ export class AppComponent {
 
   elementos: Elemento[]=[
     { 
-    icono: 'images-outline',
-    nombre:'Galeria',
-    ruta:'/galeria'
+      icono: 'images-outline',
+      nombre:'Galeria',
+      ruta:'/galeria'
     },
     { 
       icono: 'game-controller-outline',
@@ -30,11 +30,16 @@ export class AppComponent {
       nombre:'Personajes',
       ruta:'/personajes'
       },
-      { 
-        icono: 'cube-outline',
-        nombre:'Items',
-        ruta:'/items'
-        },
+    { 
+      icono: 'cube-outline',
+      nombre:'Items',
+      ruta:'/items'
+      },
+    { 
+      icono: 'people-outline',
+      nombre:'Desarrolladores',
+      ruta:'/desarrolladores'
+      },
     ];
   constructor() {}
 }
